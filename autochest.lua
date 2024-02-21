@@ -3,7 +3,7 @@ getgenv().Setting = {
     ["StopFarmWhenFoundItem"] = false,
     ["Screen"] = {
         ["WhiteScreen"] = false,
-        ["BlackScreen"] = true,
+        ["BlackScreen"] = false,
     },
     ["FpsBoost"] = false,
     ["AutoRejoin"] = true, -- no edit
