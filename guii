@@ -1,0 +1,58 @@
+local ScreenGui = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local Frame = Instance.new("Frame", ScreenGui)
+Frame.BorderSizePixel = 0
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.Size = UDim2.new(0, 504, 0, 58)
+Frame.Position = UDim2.new(0.5, 0, 0.07692, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.42
+
+local UICorner = Instance.new("UICorner", Frame)
+
+local UIStroke = Instance.new("UIStroke", Frame)
+UIStroke.Thickness = 3
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+
+local UIGradient = Instance.new("UIGradient", UIStroke)
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 40, 252)),
+    ColorSequenceKeypoint.new(1.000, Color3.fromRGB(29, 255, 248))
+}
+
+local TextLabel1 = Instance.new("TextLabel", Frame)
+TextLabel1.BorderSizePixel = 0
+TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel1.TextSize = 16
+TextLabel1.FontFace = Font.new("rbxasset://fonts/families/Roboto.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel1.BackgroundTransparency = 1
+TextLabel1.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel1.Size = UDim2.new(0, 200, 0, 50)
+TextLabel1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel1.Text = "discord.gg/isnahamzah"
+TextLabel1.Name = "sv"
+TextLabel1.Position = UDim2.new(0.5, 0, 0.27586, 0)
+
+local TextLabel2 = Instance.new("TextLabel", Frame)
+TextLabel2.TextWrapped = true
+TextLabel2.BorderSizePixel = 0
+TextLabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.TextSize = 18
+TextLabel2.FontFace = Font.new("rbxasset://fonts/families/FredokaOne.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+TextLabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.BackgroundTransparency = 1
+TextLabel2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel2.Text = "Auto Farm: None"
+TextLabel2.Name = "fm"
+TextLabel2.Position = UDim2.new(0.5, 0, 0.56897, 0)
+
+function set_content(Content1)
+    if not Content1 then TextLabel2.Text = "Auto Farm: None or Get Quest" end
+    TextLabel2.Text = Content1
+end
+return ScreenGui, require
